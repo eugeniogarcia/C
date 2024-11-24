@@ -1,6 +1,3 @@
-// pasar punteror y arrays a funciones
-// pasar valores por valor y por referencia a funciones
-
 float suma(float a, float b)
 {
     return a + b;
