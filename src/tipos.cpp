@@ -27,6 +27,9 @@ void tipos()
 
     bool v_boleana = true;
     printf("Espacio ocupado por buleano\n bool: %lu\n", sizeof(v_boleana));
+
+    //constante
+    const float pi=3.141516;
 }
 
 void cast()
