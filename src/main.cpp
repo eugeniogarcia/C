@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <tipos.h>
+#include <funciones.h>
 
 // el orden es importante. Se procesan las cosas de arriba a abajo
 // declara una variable entera constante
@@ -119,6 +120,18 @@ int main(int argc, char const *argv[])
     tipos_arrays();
     punteros();
 
-        printf("\nAdios!!!\n\n");
+    printf("\n\nFunciones\n");
+    float a = 2, b = 4, c;
+    c = suma(a, b);
+    printf("\nSuma de %f y %f es %f\n", a, b, c);
+    int valores[5];
+    inicia(valores, 5, 33);
+
+    por_valor(c);
+    printf("Tras llamar a funcion: %f\n", c);
+    por_puntero(&c);
+    printf("Tras llamar a funcion (pasando puntero): %f\n", c);
+
+    printf("\nAdios!!!\n\n");
     return 0;
 }
