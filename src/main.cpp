@@ -65,7 +65,35 @@ int main(int argc, char const *argv[])
     }
     *buf = '\0'; // fin de cadena
 
-    printf("\nEl contenido del buffer es: %s\n", buf_base);
+    printf("\nEl contenido del buffer es: %s\n\n", buf_base);
+
+    A *claseA = new A("Me llamo A (2)", 2);
+    B *claseB = new B("Me llamo B (2)", 2);
+    C *claseC = new C("Me llamo C (2)", 2);
+    char mensaje[50];
+    printf("Met. Virtual\t\tMet. en A\t\tMet. en Base\n");
+    printf("Metodos de la clase Base + Virtuales de A");
+    donde(claseA, mensaje);
+    printf("\nClase A: %f\t%s\t\t%s\t%s\n", calcula(claseA), mensaje, quien(claseA), claseA->alias);
+    printf("Metodos de la clase A");
+    claseA->donde_estoy(mensaje);
+    printf("\nClase A: %f\t%s\t\t%s\t%s\n", claseA->matematica(), mensaje, claseA->quien(), claseA->alias);
+
+    printf("\nMet. Virtual\t\tMet. en A\t\tMet. en Base\n");
+    printf("Metodos de la clase Base + Virtuales de B");
+    donde(claseB, mensaje);
+    printf("\nClase B: %f\t%s\t\t%s\t%s\n", calcula(claseB), mensaje, quien(claseB), claseB->alias);
+    printf("Metodos de la clase B, virtuales o no, y sino existen, de la padre, hasta llegar a la base");
+    claseB->donde_estoy(mensaje);
+    printf("\nClase B: %f\t%s\t\t%s\t%s\n", claseB->matematica(), mensaje, claseB->quien(), claseB->alias);
+
+    printf("\nMet. Virtual\t\tMet. en C\t\tMet. en Base\n");
+    printf("Metodos de la clase Base + Virtuales de C");
+    donde(claseC, mensaje);
+    printf("\nClase C: %f\t%s\t\t%s\t%s\n", calcula(claseC), mensaje, quien(claseC), claseC->alias);
+    printf("Metodos de la clase C, virtuales o no, y sino existen, de la padre, hasta llegar a la base");
+    claseC->donde_estoy(mensaje);
+    printf("\nClase C: %f\t%s\t%s\t%s\n", claseC->matematica(), mensaje, claseC->quien(), claseC->alias);
 
     printf("\nAdios!!!\n\n");
     return 0;
