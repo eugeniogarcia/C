@@ -43,6 +43,30 @@ int main(int argc, char const *argv[])
     imprime(punto1);
     imprime(punto2);
 
+    printf("\n\nmemoria\n");
+
+    int tam = 10;
+
+    char *buf_base = asigna(tam + 1); // reservamos una posición para el caracter de fin
+    char *buf = buf_base;
+    for (int i = 0; i < tam; i++)
+    {
+        *buf = i + 97; // el ascii 97 es la letra a
+        buf++;
+    }
+    *buf = '\0'; // fin de cadena
+
+    printf("\nEl contenido del buffer es: %s\n", buf_base);
+    buf_base = reasigna(tam + 11);
+    for (int i = tam; i < (tam + 11); i++)
+    {
+        *buf = i + 97; // el ascii 97 es la letra a
+        buf++;
+    }
+    *buf = '\0'; // fin de cadena
+
+    printf("\nEl contenido del buffer es: %s\n", buf_base);
+
     printf("\nAdios!!!\n\n");
     return 0;
 }
