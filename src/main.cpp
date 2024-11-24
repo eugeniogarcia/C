@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <tipos.h>
 #include <funciones.h>
+#include <clases.h>
+#include <memoria.h>
 
 // el orden es importante. Se procesan las cosas de arriba a abajo
 // declara una variable entera constante
