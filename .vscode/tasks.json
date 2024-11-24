@@ -31,9 +31,10 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${workspaceFolder}/src/**.cpp",
-                "${workspaceFolder}/includes/**.h",
                 "-o",
-                "${workspaceFolder}/out/${fileBasenameNoExtension}"
+                "${workspaceFolder}/out/main",
+                "-I/${workspaceFolder}/includes/"
+                //"${workspaceFolder}/out/${fileBasenameNoExtension}"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"

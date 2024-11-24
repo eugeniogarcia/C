@@ -9,7 +9,7 @@
             "type": "cppdbg",
             "request": "launch",
             "preLaunchTask": "C/C++: todos",
-            "program": "${workspaceFolder}/main",
+            "program": "${workspaceFolder}/out/main",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
